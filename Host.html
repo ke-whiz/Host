@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHIZ HOST KE</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        nav { margin: 20px; }
+        button { padding: 10px 20px; margin: 5px; }
+        .section { display: none; }
+        #home, #login, #signup, #dashboard { padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>WHIZ HOST KE</h1>
+    <nav>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('login')">Login</button>
+        <button onclick="showSection('signup')">Signup</button>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+    </nav>
+
+    <!-- Home Section (HTML, CSS, TypeScript) -->
+    <div id="home" class="section">
+        <h2>Welcome to WHIZ HOST KE</h2>
+        <p>Your platform for easy cloud hosting solutions.</p>
+        <script type="module">
+            const greet = (name: string) => {
+                console.log(`Hello, ${name}! Welcome to WHIZ HOST KE.`);
+            };
+            greet("User");
+        </script>
+    </div>
+
+    <!-- Login Section (HTML, CSS, JavaScript, TypeScript) -->
+    <div id="login" class="section">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <script>
+            function login() {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                alert(`Logged in as ${username}`);
+            }
+        </script>
+    </div>
+
+    <!-- Signup Section (HTML, CSS, JavaScript, TypeScript) -->
+    <div id="signup" class="section">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" required><br><br>
+            <button type="button" onclick="signup()">Signup</button>
+        </form>
+        <script>
+            function signup() {
+                const username = document.getElementById('signupUsername').value;
+                const email = document.getElementById('email').value;
+                alert(`Account created for ${username} with email ${email}`);
+            }
+        </script>
+    </div>
+
+    <!-- Dashboard Section (HTML) -->
+    <div id="dashboard" class="section">
+        <h2>Dashboard</h2>
+        <p>Welcome to your dashboard!</p>
+        <p>Access your data and settings here.</p>
+    </div>
+
+    <script>
+        // JavaScript to handle navigation between sections
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Show home section by default
+        showSection('home');
+    </script>
+
+</body>
+</html>
