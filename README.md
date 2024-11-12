@@ -1,4 +1,4 @@
-# 🚀 Web Development Learning Path 🚀
+6# 🚀 Web Development Learning Path 🚀
 
 Welcome to the **Web Development Learning Path**! This guide is designed to help you master the programming languages needed to develop platforms like **WHIZ HOST KE**. Follow the resources below to build your skills for free!
 
@@ -20,7 +20,7 @@ Here are some of the best free resources to get you started:
 
 ### 1. **HTML** (Structure of Web Pages)
    - **Resources**:
-     - ![MDN Web Docs Logo](https://www.google.com/search?q=html+logo&oq=html+log&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyCQgBEEUYORiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABDIHCAoQABiABDIHCAsQABiABDIHCAwQABiABDIHCA0QABiABDIHCA4QABiABNIBCDQzMDFqMGo3qAIUsAIB&client=ms-android-samsung-ss&sourceid=chrome-mobile&ie=UTF-8)
+     - ![MDN Web Docs Logo](https://ibb.co/ykvt9Sc)
        - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a> - Comprehensive and official documentation with tutorials.
        - <a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a> - Covers HTML basics with interactive examples.
        - <a href="https://www.freecodecamp.org/learn/responsive-web-design/" target="_blank">FreeCodeCamp HTML Course</a> - Interactive, beginner-friendly HTML exercises.
