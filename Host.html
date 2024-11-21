@@ -1,98 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHIZ HOST KE</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-        nav { margin: 20px; }
-        button { padding: 10px 20px; margin: 5px; }
-        .section { display: none; }
-        #home, #login, #signup, #dashboard { padding: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zefoy - Revamped</title>
+<style>
+  /* General Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    color: #333;
+  }
+
+  nav {
+    background: #007bff;
+    color: #fff;
+    padding: 1em;
+  }
+
+  nav .navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 1em;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .container {
+    margin: 2em auto;
+    max-width: 1200px;
+    padding: 1em;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    text-align: center;
+  }
+
+  .card h5 {
+    color: #007bff;
+    margin-bottom: 1em;
+  }
+
+  .btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+
+  .btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  footer {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+</style>
 </head>
 <body>
+<nav>
+  <a href="/" class="navbar-brand">Zefoy</a>
+  <ul>
+    <li><a href="#terms">Terms</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <h1>WHIZ HOST KE</h1>
-    <nav>
-        <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('login')">Login</button>
-        <button onclick="showSection('signup')">Signup</button>
-        <button onclick="showSection('dashboard')">Dashboard</button>
-    </nav>
+<div class="container">
+  <div class="card">
+    <h5>Followers</h5>
+    <button class="btn" disabled>Soon</button>
+    <p>Update coming soon!</p>
+  </div>
 
-    <!-- Home Section (HTML, CSS, TypeScript) -->
-    <div id="home" class="section">
-        <h2>Welcome to WHIZ HOST KE</h2>
-        <p>Your platform for easy cloud hosting solutions.</p>
-        <script type="module">
-            const greet = (name: string) => {
-                console.log(`Hello, ${name}! Welcome to WHIZ HOST KE.`);
-            };
-            greet("User");
-        </script>
-    </div>
+  <div class="card">
+    <h5>Hearts</h5>
+    <button class="btn" disabled>Soon</button>
+    <p>Update coming soon!</p>
+  </div>
 
-    <!-- Login Section (HTML, CSS, JavaScript, TypeScript) -->
-    <div id="login" class="section">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" required><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" required><br><br>
-            <button type="button" onclick="login()">Login</button>
-        </form>
-        <script>
-            function login() {
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
-                alert(`Logged in as ${username}`);
-            }
-        </script>
-    </div>
+  <div class="card">
+    <h5>Comments Hearts</h5>
+    <button class="btn">Go</button>
+    <p>Updated 7 hours ago.</p>
+  </div>
 
-    <!-- Signup Section (HTML, CSS, JavaScript, TypeScript) -->
-    <div id="signup" class="section">
-        <h2>Signup</h2>
-        <form id="signupForm">
-            <label for="signupUsername">Username:</label>
-            <input type="text" id="signupUsername" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required><br><br>
-            <label for="signupPassword">Password:</label>
-            <input type="password" id="signupPassword" required><br><br>
-            <button type="button" onclick="signup()">Signup</button>
-        </form>
-        <script>
-            function signup() {
-                const username = document.getElementById('signupUsername').value;
-                const email = document.getElementById('email').value;
-                alert(`Account created for ${username} with email ${email}`);
-            }
-        </script>
-    </div>
+  <div class="card">
+    <h5>Views</h5>
+    <button class="btn">Go</button>
+    <p>Updated 7 hours ago.</p>
+  </div>
 
-    <!-- Dashboard Section (HTML) -->
-    <div id="dashboard" class="section">
-        <h2>Dashboard</h2>
-        <p>Welcome to your dashboard!</p>
-        <p>Access your data and settings here.</p>
-    </div>
+  <div class="card">
+    <h5>Shares</h5>
+    <button class="btn">Go</button>
+    <p>Updated 7 hours ago.</p>
+  </div>
 
-    <script>
-        // JavaScript to handle navigation between sections
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
+  <div class="card">
+    <h5>Favorites</h5>
+    <button class="btn">Go</button>
+    <p>Updated 7 hours ago.</p>
+  </div>
+</div>
 
-        // Show home section by default
-        showSection('home');
-    </script>
-
+<footer>
+  <p>&copy; 2024 Zefoy. All Rights Reserved | <a href="#privacy">Privacy Policy</a></p>
+</footer>
 </body>
 </html>
