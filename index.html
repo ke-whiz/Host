@@ -23,7 +23,7 @@
         .calculator {
             background-color: #2b2b2b;
             border-radius: 10px;
-            width: 260px;
+            width: 280px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
             padding: 20px;
         }
@@ -67,11 +67,11 @@
         }
 
         .operator {
-            background-color: #f39c12;
+            background-color: #3498db;
         }
 
         .operator:hover {
-            background-color: #e67e22;
+            background-color: #2980b9;
         }
 
         .equal {
@@ -82,6 +82,14 @@
         .equal:hover {
             background-color: #2ecc71;
         }
+
+        .special {
+            background-color: #9b59b6;
+        }
+
+        .special:hover {
+            background-color: #8e44ad;
+        }
     </style>
 </head>
 <body>
@@ -90,26 +98,32 @@
             <input type="text" id="display" disabled />
         </div>
         <div class="buttons">
+            <button class="button special" onclick="backspace()">←</button>
             <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button special" onclick="appendToDisplay('√')">√</button>
+            <button class="button operator" onclick="appendToDisplay('+')">+</button>
+
             <button class="button" onclick="appendToDisplay('7')">7</button>
             <button class="button" onclick="appendToDisplay('8')">8</button>
             <button class="button" onclick="appendToDisplay('9')">9</button>
-            <button class="button operator" onclick="appendToDisplay('+')">+</button>
+            <button class="button operator" onclick="appendToDisplay('-')">-</button>
 
             <button class="button" onclick="appendToDisplay('4')">4</button>
             <button class="button" onclick="appendToDisplay('5')">5</button>
             <button class="button" onclick="appendToDisplay('6')">6</button>
-            <button class="button operator" onclick="appendToDisplay('-')">-</button>
+            <button class="button operator" onclick="appendToDisplay('*')">*</button>
 
             <button class="button" onclick="appendToDisplay('1')">1</button>
             <button class="button" onclick="appendToDisplay('2')">2</button>
             <button class="button" onclick="appendToDisplay('3')">3</button>
-            <button class="button operator" onclick="appendToDisplay('*')">*</button>
+            <button class="button operator" onclick="appendToDisplay('/')">/</button>
 
             <button class="button" onclick="appendToDisplay('0')">0</button>
             <button class="button" onclick="appendToDisplay('.')">.</button>
-            <button class="button operator" onclick="appendToDisplay('/')">/</button>
+            <button class="button special" onclick="appendToDisplay('cos')">cos</button>
             <button class="button equal" onclick="calculate()">=</button>
+
+            <button class="button special" onclick="appendToDisplay('tan')">tan</button>
         </div>
     </div>
 
@@ -122,9 +136,23 @@
             document.getElementById('display').value += value;
         }
 
+        function backspace() {
+            let displayValue = document.getElementById('display').value;
+            document.getElementById('display').value = displayValue.slice(0, -1);
+        }
+
         function calculate() {
+            let displayValue = document.getElementById('display').value;
+
+            // Replace square root (√) with Math.sqrt
+            displayValue = displayValue.replace(/√/g, 'Math.sqrt');
+
+            // Replace trigonometric functions
+            displayValue = displayValue.replace(/cos/g, 'Math.cos');
+            displayValue = displayValue.replace(/tan/g, 'Math.tan');
+
             try {
-                document.getElementById('display').value = eval(document.getElementById('display').value);
+                document.getElementById('display').value = eval(displayValue);
             } catch (error) {
                 document.getElementById('display').value = 'Error';
             }
@@ -132,4 +160,3 @@
     </script>
 </body>
 </html>
-
